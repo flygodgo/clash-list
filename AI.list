@@ -1,82 +1,173 @@
-# 内容：Ai Bard anthropic
-# 域名关键字匹配
-# DOMAIN-KEYWORD,openai
-# DOMAIN-KEYWORD,anthropic
-# DOMAIN-KEYWORD,Claude
+# AI 服务代理规则（精细分类 + 全中文注释）
+# 适用于 Clash / Surge / Quantumult X / Loon
+# 已去重、按服务商分类、按功能细分
+# 【已移除所有 PROXY，仅保留规则本体】
 
-# AI (Merged & Deduplicated - Plain List Format)
+rules:
 
-DOMAIN-KEYWORD,anthropic
-DOMAIN-KEYWORD,claude
-DOMAIN-KEYWORD,openai
+  # ========================================
+  # 一、关键词匹配（宽泛匹配，优先级高）
+  # ========================================
+  - DOMAIN-KEYWORD,openai
+  - DOMAIN-KEYWORD,anthropic
+  - DOMAIN-KEYWORD,claude
+  - DOMAIN-KEYWORD,huggingface
+  - DOMAIN-KEYWORD,cohere
+  - DOMAIN-KEYWORD,stability
+  - DOMAIN-KEYWORD,replicate
+  - DOMAIN-KEYWORD,elevenlabs
+  - DOMAIN-KEYWORD,runway
 
-DOMAIN,ai.google.dev
-DOMAIN,aistudio.google.com
-DOMAIN,api.githubcopilot.com
-DOMAIN,api.groq.com
-DOMAIN,api.together.xyz
-DOMAIN,bard.google.com
-DOMAIN,console.groq.com
-DOMAIN,copilot-proxy.githubusercontent.com
-DOMAIN,gemini.google.com
-DOMAIN,generativelanguage.googleapis.com
-DOMAIN,sydney.bing.com
+  # ========================================
+  # 二、OpenAI 系列（官网 + ChatGPT + API + 资源）
+  # ========================================
+  - DOMAIN,chatgpt.com
+  - DOMAIN,openai.com
+  - DOMAIN-SUFFIX,chat.openai.com
+  - DOMAIN-SUFFIX,chatgpt.com
+  - DOMAIN-SUFFIX,openai.com
+  - DOMAIN-SUFFIX,oaistatic.com         # 静态资源
+  - DOMAIN-SUFFIX,oaiusercontent.com   # 用户上传内容
+  - DOMAIN-SUFFIX,openaiapi-site.azureedge.net  # API CDN
 
-DOMAIN-SUFFIX,ai.azure.com
-DOMAIN-SUFFIX,android.googleapis.com
-DOMAIN-SUFFIX,anthropic.com
-DOMAIN-SUFFIX,aistudio-pa.clients6.google.com
-DOMAIN-SUFFIX,aistudio.google.com
-DOMAIN-SUFFIX,auth0.com
-DOMAIN-SUFFIX,bing.com
-DOMAIN-SUFFIX,bortzmeyer.org
-DOMAIN-SUFFIX,challenges.cloudflare.com
-DOMAIN-SUFFIX,chatgpt.com
-DOMAIN-SUFFIX,claude.ai
-DOMAIN-SUFFIX,claudeusercontent.com
-DOMAIN-SUFFIX,client-api.arkoselabs.com
-DOMAIN-SUFFIX,conman.org
-DOMAIN-SUFFIX,copilot.cloud.microsoft
-DOMAIN-SUFFIX,copilot.microsoft.com
-DOMAIN-SUFFIX,crunchyroll.com
-DOMAIN-SUFFIX,crunchyrollcdn.com
-DOMAIN-SUFFIX,crunchyrollsvc.com
-DOMAIN-SUFFIX,cursor.com
-DOMAIN-SUFFIX,cursor.sh
-DOMAIN-SUFFIX,difyai.com
-DOMAIN-SUFFIX,events.statsigapi.net
-DOMAIN-SUFFIX,featuregates.org
-DOMAIN-SUFFIX,gemini-pa.googleapis.com
-DOMAIN-SUFFIX,gemini.google.com
-DOMAIN-SUFFIX,generativelanguage.googleapis.com
-DOMAIN-SUFFIX,genspark.ai
-DOMAIN-SUFFIX,googleapis.cn
-DOMAIN-SUFFIX,googleapis.com
-DOMAIN-SUFFIX,googleusercontent.com
-DOMAIN-SUFFIX,grazie.ai
-DOMAIN-SUFFIX,grazie.aws.intellij.net
-DOMAIN-SUFFIX,groq.com
-DOMAIN-SUFFIX,grok.com
-DOMAIN-SUFFIX,gstatic.com
-DOMAIN-SUFFIX,identrust.com
-DOMAIN-SUFFIX,intercom.io
-DOMAIN-SUFFIX,intercomcdn.com
-DOMAIN-SUFFIX,makersuite.google.com
-DOMAIN-SUFFIX,meta.ai
-DOMAIN-SUFFIX,metademolab.com
-DOMAIN-SUFFIX,mistral.ai
-DOMAIN-SUFFIX,mozz.us
-DOMAIN-SUFFIX,oaiusercontent.com
-DOMAIN-SUFFIX,oaistatic.com
-DOMAIN-SUFFIX,openai.com
-DOMAIN-SUFFIX,openaiapi-site.azureedge.net
-DOMAIN-SUFFIX,perplexity.ai
-DOMAIN-SUFFIX,popcorn.plus
-DOMAIN-SUFFIX,proactivebackend-pa.googleapis.com
-DOMAIN-SUFFIX,sentry.io
-DOMAIN-SUFFIX,signalr.net
-DOMAIN-SUFFIX,sora.com
-DOMAIN-SUFFIX,stripe.com
-DOMAIN-SUFFIX,vulpes.one
-DOMAIN-SUFFIX,x.ai
-DOMAIN-SUFFIX,x.com
+  # ========================================
+  # 三、Anthropic / Claude 系列
+  # ========================================
+  - DOMAIN,claude.ai
+  - DOMAIN-SUFFIX,anthropic.com
+  - DOMAIN-SUFFIX,claude.ai
+  - DOMAIN-SUFFIX,claudeusercontent.com
+
+  # ========================================
+  # 四、Google AI 生态（Gemini + Bard + NotebookLM + AI Studio）
+  # ========================================
+  - DOMAIN,gemini.google.com
+  - DOMAIN,bard.google.com
+  - DOMAIN,notebooklm.google.com
+  - DOMAIN,aistudio.google.com
+  - DOMAIN,ai.google.dev
+  - DOMAIN,makersuite.google.com
+  - DOMAIN-SUFFIX,gemini.google.com
+  - DOMAIN-SUFFIX,generativelanguage.googleapis.com
+  - DOMAIN-SUFFIX,gemini-pa.googleapis.com
+  - DOMAIN-SUFFIX,aistudio.google.com
+  - DOMAIN-SUFFIX,aistudio-pa.clients6.google.com
+  - DOMAIN-SUFFIX,proactivebackend-pa.googleapis.com
+  - DOMAIN-SUFFIX,google.ai
+  - DOMAIN-SUFFIX,ai.google.com
+
+  # ========================================
+  # 五、Microsoft AI（Copilot + Bing AI + Azure AI）
+  # ========================================
+  - DOMAIN,sydney.bing.com
+  - DOMAIN-SUFFIX,bing.com
+  - DOMAIN-SUFFIX,copilot.microsoft.com
+  - DOMAIN-SUFFIX,copilot.cloud.microsoft
+  - DOMAIN-SUFFIX,api.githubcopilot.com
+  - DOMAIN-SUFFIX,copilot-proxy.githubusercontent.com
+  - DOMAIN-SUFFIX,ai.azure.com
+
+  # ========================================
+  # 六、xAI（Grok）
+  # ========================================
+  - DOMAIN-SUFFIX,grok.com
+  - DOMAIN-SUFFIX,x.ai
+  - DOMAIN-SUFFIX,x.com   # Grok 登录依赖 X 平台
+
+  # ========================================
+  # 七、Groq（超快推理）
+  # ========================================
+  - DOMAIN,api.groq.com
+  - DOMAIN,console.groq.com
+  - DOMAIN-SUFFIX,groq.com
+
+  # ========================================
+  # 八、Hugging Face（模型托管 + Spaces）
+  # ========================================
+  - DOMAIN,api.huggingface.co
+  - DOMAIN-SUFFIX,huggingface.co
+
+  # ========================================
+  # 九、Cohere（企业级 LLM）
+  # ========================================
+  - DOMAIN,api.cohere.ai
+  - DOMAIN-SUFFIX,cohere.ai
+
+  # ========================================
+  # 十、Stability AI（图像生成）
+  # ========================================
+  - DOMAIN,api.stability.ai
+  - DOMAIN-SUFFIX,stability.ai
+
+  # ========================================
+  # 十一、Replicate（开源模型云运行）
+  # ========================================
+  - DOMAIN,api.replicate.com
+  - DOMAIN-SUFFIX,replicate.com
+
+  # ========================================
+  # 十二、ElevenLabs（AI 语音合成）
+  # ========================================
+  - DOMAIN,api.elevenlabs.io
+  - DOMAIN-SUFFIX,elevenlabs.io
+
+  # ========================================
+  # 十三、RunwayML（AI 视频生成）
+  # ========================================
+  - DOMAIN,api.runwayml.com
+  - DOMAIN-SUFFIX,runwayml.com
+
+  # ========================================
+  # 十四、其他新兴 AI 服务
+  # ========================================
+  - DOMAIN,api.together.xyz
+  - DOMAIN-SUFFIX,together.ai
+  - DOMAIN-SUFFIX,perplexity.ai      # Perplexity AI 搜索
+  - DOMAIN-SUFFIX,genspark.ai       # Genspark
+  - DOMAIN-SUFFIX,meta.ai           # Meta AI (Llama)
+  - DOMAIN-SUFFIX,mistral.ai        # Mistral AI
+  - DOMAIN-SUFFIX,sora.com          # OpenAI Sora（未来可能启用）
+  - DOMAIN-SUFFIX,difyai.com        # Dify.AI 开源工作流
+  - DOMAIN-SUFFIX,cursor.com        # Cursor AI 代码编辑器
+  - DOMAIN-SUFFIX,cursor.sh
+  - DOMAIN-SUFFIX,llamaindex.ai     # LlamaIndex
+  - DOMAIN-SUFFIX,langchain.dev     # LangChain
+  - DOMAIN-SUFFIX,grazie.ai         # JetBrains AI
+  - DOMAIN-SUFFIX,grazie.aws.intellij.net
+
+  # ========================================
+  # 十五、通用依赖（认证、CDN、分析、支付）
+  # ========================================
+  - DOMAIN-SUFFIX,auth0.com                    # 统一登录
+  - DOMAIN-SUFFIX,identrust.com                # SSL 证书
+  - DOMAIN-SUFFIX,stripe.com                   # 支付
+  - DOMAIN-SUFFIX,intercom.io                  # 客服聊天
+  - DOMAIN-SUFFIX,intercomcdn.com
+  - DOMAIN-SUFFIX,sentry.io                    # 错误监控
+  - DOMAIN-SUFFIX,events.statsigapi.net        # 功能开关
+  - DOMAIN-SUFFIX,featuregates.org             # A/B 测试
+  - DOMAIN-SUFFIX,signalr.net                  # 实时通信
+  - DOMAIN-SUFFIX,client-api.arkoselabs.com    # FunCaptcha 验证
+  - DOMAIN-SUFFIX,challenges.cloudflare.com    # Cloudflare 挑战
+
+  # ========================================
+  # 十六、CDN & 静态资源（提升加载速度）
+  # ========================================
+  - DOMAIN-SUFFIX,gstatic.com
+  - DOMAIN-SUFFIX,googleapis.com
+  - DOMAIN-SUFFIX,googleapis.cn
+  - DOMAIN-SUFFIX,googleusercontent.com
+  - DOMAIN-SUFFIX,android.googleapis.com
+
+  # ========================================
+  # 十七、其他杂项（可选，视需求保留）
+  # ========================================
+  - DOMAIN-SUFFIX,bortzmeyer.org
+  - DOMAIN-SUFFIX,conman.org
+  - DOMAIN-SUFFIX,mozz.us
+  - DOMAIN-SUFFIX,vulpes.one
+  - DOMAIN-SUFFIX,popcorn.plus
+  - DOMAIN-SUFFIX,metademolab.com
+  - DOMAIN-SUFFIX,crunchyroll.com         # （部分 AI 训练数据相关？可删）
+  - DOMAIN-SUFFIX,crunchyrollcdn.com
+  - DOMAIN-SUFFIX,crunchyrollsvc.com
