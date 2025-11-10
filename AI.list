@@ -54,7 +54,9 @@ DOMAIN,sydney.bing.com
 DOMAIN-SUFFIX,ai.azure.com
 DOMAIN-SUFFIX,bing.com
 DOMAIN-SUFFIX,copilot.cloud.microsoft
-DOMAIN-SUFFIX,copilot.microsoft.com
+DOMAIN,copilot.microsoft.com
+DOMAIN-SUFFIX,bing.com
+DOMAIN,github.com
 
 # 六、xAI（Grok）
 DOMAIN-SUFFIX,grok.com
@@ -136,3 +138,4 @@ DOMAIN-SUFFIX,metademolab.com
 DOMAIN-SUFFIX,mozz.us
 DOMAIN-SUFFIX,popcorn.plus
 DOMAIN-SUFFIX,vulpes.one
+
