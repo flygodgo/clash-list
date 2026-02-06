@@ -14,14 +14,17 @@ DOMAIN-KEYWORD,runway
 DOMAIN-KEYWORD,stability
 
 # 二、OpenAI 系列（官网 + ChatGPT + API + 资源）
-DOMAIN,chatgpt.com
-DOMAIN,openai.com
-DOMAIN-SUFFIX,chat.openai.com
-DOMAIN-SUFFIX,chatgpt.com
-DOMAIN-SUFFIX,openai.com
-DOMAIN-SUFFIX,oaistatic.com         # 静态资源
-DOMAIN-SUFFIX,oaiusercontent.com   # 用户上传内容
-DOMAIN-SUFFIX,openaiapi-site.azureedge.net  # API CDN
+# ChatGPT / OpenAI
+DOMAIN-SUFFIX,openai.com,DIRECT
+DOMAIN-SUFFIX,chatgpt.com,DIRECT
+DOMAIN-SUFFIX,ai.com,DIRECT
+DOMAIN-SUFFIX,auth0.com,DIRECT
+DOMAIN-SUFFIX,chat.openai.com,DIRECT
+DOMAIN-SUFFIX,api.openai.com,DIRECT
+DOMAIN-SUFFIX,cdn.openai.com,DIRECT
+DOMAIN-SUFFIX,oaiusercontent.com,DIRECT
+DOMAIN-SUFFIX,openaicom-api.azureedge.net,DIRECT
+DOMAIN-SUFFIX,openaiapi-site.azureedge.net,DIRECT
 
 # 三、Anthropic / Claude 系列
 DOMAIN,claude.ai
@@ -138,5 +141,6 @@ DOMAIN-SUFFIX,metademolab.com
 DOMAIN-SUFFIX,mozz.us
 DOMAIN-SUFFIX,popcorn.plus
 DOMAIN-SUFFIX,vulpes.one
+
 
 
