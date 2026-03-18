@@ -35,6 +35,7 @@ DOMAIN-SUFFIX,claudeusercontent.com
 # 四、Google AI 生态（Gemini + Bard + NotebookLM + AI Studio）
 DOMAIN,ai.google.dev
 DOMAIN,google.com
+DOMAIN,googletagmanager.com
 DOMAIN,aistudio.google.com
 DOMAIN,bard.google.com
 DOMAIN,gemini.google.com
