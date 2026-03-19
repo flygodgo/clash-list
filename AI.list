@@ -32,25 +32,67 @@ DOMAIN-SUFFIX,anthropic.com
 DOMAIN-SUFFIX,claude.ai
 DOMAIN-SUFFIX,claudeusercontent.com
 
-# 四、Google AI 生态（Gemini + Bard + NotebookLM + AI Studio）
-DOMAIN,ai.google.dev
-DOMAIN,google.com
-DOMAIN,googletagmanager.com
-DOMAIN,aistudio.google.com
-DOMAIN,bard.google.com
-DOMAIN,gemini.google.com
-DOMAIN,makersuite.google.com
-DOMAIN,notebooklm.google.com
-DOMAIN-SUFFIX,ai.google.com
-DOMAIN-SUFFIX,aistudio-pa.clients6.google.com
-DOMAIN-SUFFIX,aistudio.google.com
-DOMAIN-SUFFIX,gemini-pa.googleapis.com
-DOMAIN-SUFFIX,gemini.google.com
-DOMAIN-SUFFIX,generativelanguage.googleapis.com
-DOMAIN-SUFFIX,google.ai
-DOMAIN-SUFFIX,makersuite.google.com
-DOMAIN-SUFFIX,notebooklm.google.com
-DOMAIN-SUFFIX,proactivebackend-pa.googleapis.com
+# 四、Google 生态（Gemini + Bard + NotebookLM + AI Studio）
+# Google
+DOMAIN-SUFFIX,google.com
+DOMAIN-SUFFIX,google.com.hk
+DOMAIN-SUFFIX,google.com.tw
+DOMAIN-SUFFIX,google.cn
+DOMAIN-SUFFIX,googleapis.com
+DOMAIN-SUFFIX,googleapis.cn
+DOMAIN-SUFFIX,googleusercontent.com
+DOMAIN-SUFFIX,gstatic.com
+DOMAIN-SUFFIX,ggpht.com
+DOMAIN-SUFFIX,google-analytics.com
+DOMAIN-SUFFIX,googleadservices.com
+DOMAIN-SUFFIX,googleads.g.doubleclick.net
+
+# YouTube
+DOMAIN-SUFFIX,youtube.com
+DOMAIN-SUFFIX,youtu.be
+DOMAIN-SUFFIX,ytimg.com
+DOMAIN-SUFFIX,googlevideo.com
+
+# Google Play / Android
+DOMAIN-SUFFIX,play.google.com
+DOMAIN-SUFFIX,play-lh.googleusercontent.com
+DOMAIN-SUFFIX,android.com
+DOMAIN-SUFFIX,android.clients.google.com
+DOMAIN-SUFFIX,gvt1.com
+DOMAIN-SUFFIX,gvt2.com
+
+# Gmail / Workspace
+DOMAIN-SUFFIX,gmail.com
+DOMAIN-SUFFIX,mail.google.com
+DOMAIN-SUFFIX,workspace.google.com
+DOMAIN-SUFFIX,gsuite.google.com
+DOMAIN-SUFFIX,withgoogle.com
+
+# Drive / Docs / Sheets / Meet
+DOMAIN-SUFFIX,drive.google.com
+DOMAIN-SUFFIX,docs.google.com
+DOMAIN-SUFFIX,sheets.google.com
+DOMAIN-SUFFIX,slides.google.com
+DOMAIN-SUFFIX,meet.google.com
+DOMAIN-SUFFIX,hangouts.google.com
+
+# Maps
+DOMAIN-SUFFIX,maps.google.com
+DOMAIN-SUFFIX,googlemaps.com
+DOMAIN-SUFFIX,streetviewpixels-pa.googleapis.com
+
+# Photos
+DOMAIN-SUFFIX,photos.google.com
+
+# Fonts
+DOMAIN-SUFFIX,fonts.googleapis.com
+DOMAIN-SUFFIX,fonts.gstatic.com
+
+# Ads / Tag Manager
+DOMAIN-SUFFIX,doubleclick.net
+DOMAIN-SUFFIX,googletagmanager.com
+DOMAIN-SUFFIX,googletagservices.com
+
 
 # 五、Microsoft AI（Copilot + Bing AI + Azure AI）
 DOMAIN,api.githubcopilot.com
